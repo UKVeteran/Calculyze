@@ -1,26 +1,39 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
+/* Reset CSS */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Header */
 header {
-  background-color: #333;
+  background-color: #3a3f58;
   color: white;
-  padding: 10px 0;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
-  margin: 0;
-  font-size: 2.5em;
+  font-size: 3em;
+  margin-bottom: 5px;
+}
+
+header .logo p {
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
 }
 
 nav ul li {
@@ -31,55 +44,133 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
-section {
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Sections */
+.section {
+  padding: 40px;
+  text-align: center;
+  margin: 20px auto;
   border-radius: 8px;
 }
 
-h2 {
-  font-size: 2em;
+.home-section {
+  background: linear-gradient(to right, #6a7dff, #3a49f1);
+  color: white;
+  padding: 100px 20px;
 }
 
+.home-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.home-section button {
+  background-color: #f39c12;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-section button:hover {
+  background-color: #e67e22;
+}
+
+/* About Section */
+.about-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.about-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section form {
+  display: grid;
+  gap: 15px;
+}
+
+.contact-section input, .contact-section button {
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.contact-section button {
+  background-color: #3a49f1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #6a7dff;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background-color: #333;
   color: white;
   position: fixed;
   width: 100%;
   bottom: 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-  display: grid;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
+footer p {
+  font-size: 1.1em;
 }
 
-input {
-  padding: 10px;
-  font-size: 1em;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
 
-button {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-button:hover {
-  background-color: #555;
+  .section {
+    padding: 20px;
+  }
 }
